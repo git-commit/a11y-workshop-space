@@ -18,7 +18,7 @@ const Search = ({
     <>
       <form
         role="search"
-        className="md:w-90 my-4 flex w-60 items-center justify-center gap-2"
+        className="md:w-90 my-4 flex w-full items-center justify-center gap-2 px-4"
         onSubmit={onSubmit}
       >
         <input
@@ -26,10 +26,10 @@ const Search = ({
           placeholder="Search"
           onChange={(e) => setSearchTerm(e.target.value)}
           aria-label="Search ships"
-          className="grow-1 w-[200px] border border-gray-200 p-2 placeholder:italic placeholder:text-gray-500 md:w-[300px]"
+          className="grow-1 border border-gray-200 p-2 placeholder:italic placeholder:text-gray-500 md:w-[300px]"
         />
         <button type="submit">
-          <img src="/images/search.png" alt="Search" />
+          <img src="/images/search.png" alt="Search" width={24} height={24} />
         </button>
       </form>
     </>
