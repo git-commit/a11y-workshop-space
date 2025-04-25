@@ -18,13 +18,13 @@ const Search = ({
           onChange={(e) => setSearchTerm(e.target.value)}
           className="grow-1 w-[300px] border border-gray-200 p-2"
         />
-        <div>
+        <button>
           <img
             src="/images/search.png"
             onClick={() => executeSearch(searchTerm)}
             className="cursor-pointer"
           />
-        </div>
+        </button>
       </div>
     </>
   );
