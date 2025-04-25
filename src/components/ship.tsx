@@ -65,7 +65,7 @@ export const Ship = ({
               />
               <div>Pay in {numberOfRates} Rates</div>
             </div>
-            <div className="flex justify-end">
+            <button className="flex justify-end">
               <img
                 src={
                   isShipInCart(ship.id)
@@ -79,7 +79,7 @@ export const Ship = ({
                 }
                 onClick={() => addToCart(ship.id)}
               />
-            </div>
+            </button>
           </div>
         </div>
       </div>
