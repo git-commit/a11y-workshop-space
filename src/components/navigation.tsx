@@ -33,34 +33,33 @@ const Navigation = ({
   return (
     <>
       {/* Home Button */}
-      <div className="flex justify-between w-full">
+      <div className="flex w-full justify-between">
         {/* Left: Navigation */}
         <div className="flex">
-
-        <Link href={"/"} className="mr-2">
-          <img
-            src={"/images/logo.png"}
-            width="40"
-            height="40"
-            onClick={() => router.push("/")}
-            className="cursor-pointer"
+          <Link href={"/"} className="mx-4">
+            <img
+              src={"/images/logo.png"}
+              width="40"
+              height="40"
+              onClick={() => router.push("/")}
+              className="cursor-pointer"
             />
-        </Link>
-        {/* Navigation / filter buttons */}
-        <div className="flex gap-4">
-          {pages.map((filterValue) => (
-            <button
-            onClick={() => goToPage(filterValue.path)}
-            key={filterValue.path}
-            className={`shrink-0 cursor-pointer py-2 ${filterValue.pageName === selectedPage ? "font-bold" : ""}`}
-            >
-              {filterValue.displayName}
-            </button>
-          ))}
-        </div>
+          </Link>
+          {/* Navigation / filter buttons */}
+          <div className="flex gap-4">
+            {pages.map((filterValue) => (
+              <button
+                onClick={() => goToPage(filterValue.path)}
+                key={filterValue.path}
+                className={`shrink-0 cursor-pointer py-2 ${filterValue.pageName === selectedPage ? "font-bold" : ""}`}
+              >
+                {filterValue.displayName}
+              </button>
+            ))}
           </div>
+        </div>
         {/* Right: Cart Button */}
-        <button className="flex items-center mr-4">
+        <button className="mx-4 flex items-center gap-1">
           <img
             src={"/images/cart.png"}
             className="cursor-pointer"
